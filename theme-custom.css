@@ -1,0 +1,86 @@
+@import url("styles/themes/theme-lucy.min.css");
+.factory-flag{ visibility: hidden; }
+@-webkit-keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  @keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+    50% {
+        transform: translate3d(0, 0, 0);
+        /* -webkit-transform: translate3d(-100%, 0, 0); */
+        /* transform: translate3d(-100%, 0, 0); */
+    }
+    100%{
+        transform: translate3d(100%, 0, 0);
+    }
+  }
+  .ticker-wrap {
+    position: relative;
+    margin-top: 120px;
+    z-index: 999;
+      left: 0;
+    width: 100%;
+    overflow: hidden;
+    /* height:200px; */
+    background-color:transparent;
+    box-sizing: content-box;
+  }
+  .ticker-wrap .ticker {
+    display: inline-block;
+    /* height: 4rem; */
+    /* line-height: 4rem; */
+    white-space: nowrap;
+    padding-right: 100%;
+    transform: translate3d(-100%,0,0);
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 100s;
+    animation-duration: 100s;
+  }
+  .ticker__item{
+      display: inline-block;
+      padding-left: 20px;
+  }
+/* Back To Top */
+.to-top {
+    display: none; 
+    position: fixed; 
+    bottom: 50px; 
+    right: 50px; 
+    z-index: 999; 
+    border: none; 
+    outline: none; 
+    width: 50px;
+    height: 50px;
+    background-color: #333; 
+    color: white;
+    cursor: pointer; 
+    transition:display 1s;
+    padding-top: 12.5px;
+    text-align: center;
+    border-radius: 100%; 
+    font-size: 18px;
+  }
+  .to-top i{
+      color: #dbab83;
+  }
+  .to-top:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
